@@ -3,15 +3,15 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using RestauranteAPI.Domain.Entities;
 
-namespace RestauranteAPI.Domain
+namespace RestauranteAPI.Domain.Concrete
 {
-    public partial class RestauranteContext : DbContext
+    public partial class restauranteContext : DbContext
     {
-        public RestauranteContext()
+        public restauranteContext()
         {
         }
 
-        public RestauranteContext(DbContextOptions<RestauranteContext> options)
+        public restauranteContext(DbContextOptions<restauranteContext> options)
             : base(options)
         {
         }
@@ -20,7 +20,7 @@ namespace RestauranteAPI.Domain
         public virtual DbSet<Respuesta> Respuesta { get; set; }
         public virtual DbSet<Sucursal> Sucursal { get; set; }
 
-
+        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Pregunta>(entity =>
@@ -36,13 +36,11 @@ namespace RestauranteAPI.Domain
 
                 entity.Property(e => e.Enunciado).HasMaxLength(500);
 
-                entity.Property(e => e.PreguntaId).HasColumnName("PreguntaID");
+                entity.Property(e => e.Genero).HasMaxLength(100);
 
-                entity.HasOne(d => d.Pregunta)
-                    .WithMany(p => p.Respuesta)
-                    .HasForeignKey(d => d.PreguntaId)
-                    .OnDelete(DeleteBehavior.SetNull)
-                    .HasConstraintName("pregunta_fk");
+                entity.Property(e => e.Nombre).HasMaxLength(200);
+
+                entity.Property(e => e.Recomendaciones).HasMaxLength(300);
             });
 
             modelBuilder.Entity<Sucursal>(entity =>

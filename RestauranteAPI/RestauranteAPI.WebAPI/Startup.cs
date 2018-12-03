@@ -35,7 +35,7 @@ namespace RestauranteAPI.WebAPI
             }));
 
             // Dependency Injector
-            services.AddDbContext<RestauranteContext>(options =>
+            services.AddDbContext<restauranteContext>(options =>
                 options.UseNpgsql(
                     Configuration["Data:DbPostgres:ConnectionString"]));
             services.AddTransient<IPreguntaRepository, PreguntaRepository>();

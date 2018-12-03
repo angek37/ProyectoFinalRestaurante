@@ -1,0 +1,19 @@
+<nb-card [nbSpinner]="loading">
+  <nb-card-header>Preguntas</nb-card-header>
+  <nb-card-body>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>Enunciado</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let pregunta of preguntas">
+        <td>{{ pregunta.preguntaId }}</td>
+        <td>{{ pregunta.enunciado }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </nb-card-body>
+</nb-card>

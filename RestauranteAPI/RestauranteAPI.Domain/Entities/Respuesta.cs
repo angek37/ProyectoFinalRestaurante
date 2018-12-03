@@ -8,8 +8,11 @@ namespace RestauranteAPI.Domain.Entities
         public int RespuestaId { get; set; }
         public string Enunciado { get; set; }
         public DateTime? CreatedOn { get; set; }
-        public int PreguntaId { get; set; }
-
-        public Pregunta Pregunta { get; set; }
+        public string Nombre { get; set; }
+        public string Genero { get; set; }
+        public bool? Servicio { get; set; }
+        public bool? Restaurante { get; set; }
+        public string Recomendaciones { get; set; }
+        public int? Calificacion { get; set; }
     }
 }

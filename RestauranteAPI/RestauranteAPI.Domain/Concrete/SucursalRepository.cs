@@ -8,9 +8,9 @@ namespace RestauranteAPI.Domain.Concrete
 {
     public class SucursalRepository : ISucursalRepository
     {
-        private readonly RestauranteContext _ctx;
+        private readonly restauranteContext _ctx;
 
-        public SucursalRepository(RestauranteContext ctx)
+        public SucursalRepository(restauranteContext ctx)
         {
             _ctx = ctx;
         }

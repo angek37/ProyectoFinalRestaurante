@@ -8,9 +8,9 @@ namespace RestauranteAPI.Domain.Concrete
 {
     public class PreguntaRepository : IPreguntaRepository
     {
-        private readonly RestauranteContext _ctx;
+        private readonly restauranteContext _ctx;
         
-        public PreguntaRepository(RestauranteContext ctx)
+        public PreguntaRepository(restauranteContext ctx)
         {
             _ctx = ctx;
         }

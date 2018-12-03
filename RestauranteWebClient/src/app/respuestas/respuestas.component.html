@@ -1,0 +1,33 @@
+<nb-card [nbSpinner]="loading">
+  <nb-card-header>Respuestas</nb-card-header>
+  <nb-card-body>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>Nombre</th>
+        <th>Fecha</th>
+        <th>Genero</th>
+        <th>Servicio</th>
+        <th>Restaurante</th>
+        <th>Recomendaciones</th>
+        <th>Calificación</th>
+        <th>Acción</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let respuesta of respuestas">
+        <td>{{ respuesta.respuestaId }}</td>
+        <td>{{ respuesta.nombre }}</td>
+        <td>{{ respuesta.createdOn | date : 'short' }}</td>
+        <td>{{ respuesta.genero }}</td>
+        <td>{{ respuesta.servicio | servicio }}</td>
+        <td>{{ respuesta.restaurante | servicio }}</td>
+        <td>{{ respuesta.recomendaciones }}</td>
+        <td>{{ respuesta.calificacion }}</td>
+        <td><button type="button" class="btn btn-danger" (click)="delete(respuesta.respuestaId)"><i class="fas fa-trash-alt"></i></button></td>
+      </tr>
+      </tbody>
+    </table>
+  </nb-card-body>
+</nb-card>

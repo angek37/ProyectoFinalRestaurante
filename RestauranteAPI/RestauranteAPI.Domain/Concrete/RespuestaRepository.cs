@@ -8,9 +8,9 @@ namespace RestauranteAPI.Domain.Concrete
 {
     public class RespuestaRepository : IRespuestaRepository
     {
-        private readonly RestauranteContext _ctx;
+        private readonly restauranteContext _ctx;
 
-        public RespuestaRepository(RestauranteContext ctx)
+        public RespuestaRepository(restauranteContext ctx)
         {
             _ctx = ctx;
         }
@@ -30,7 +30,12 @@ namespace RestauranteAPI.Domain.Concrete
                 if (dbEntry != null)
                 {
                     dbEntry.Enunciado = respuesta.Enunciado;
-                    dbEntry.PreguntaId = respuesta.PreguntaId;
+                    dbEntry.Nombre = respuesta.Nombre;
+                    dbEntry.Genero = respuesta.Genero;
+                    dbEntry.Servicio = respuesta.Servicio;
+                    dbEntry.Calificacion = respuesta.Calificacion;
+                    dbEntry.Restaurante = respuesta.Restaurante;
+                    dbEntry.Recomendaciones = respuesta.Recomendaciones;
                 }
             }
 
