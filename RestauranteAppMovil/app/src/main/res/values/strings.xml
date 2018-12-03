@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Feedback</string>
+    <string-array name="estados">
+        <item>Nayarit</item>
+        <item>Sonora</item>
+        <item>Hidalgo</item>
+        <item>Guanajuato</item>
+        <item>Puebla</item>
+        <item>Jalisco</item>
+        <item>Chiapas</item>
+    </string-array>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
