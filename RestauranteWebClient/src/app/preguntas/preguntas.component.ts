@@ -7,9 +7,9 @@ import {ApiService} from '../api.service';
   styleUrls: ['./preguntas.component.css']
 })
 export class PreguntasComponent implements OnInit, OnDestroy {
-
-  private preguntas;
+  preguntas;
   private preguntaSub;
+  loading = true;
 
   constructor(private ApiSvc: ApiService) { }
 
@@ -18,6 +18,18 @@ export class PreguntasComponent implements OnInit, OnDestroy {
       .subscribe(
         (resp: any) => {
           this.preguntas = resp;
+          this.preguntas.sort((obj1, obj2) => {
+            if (obj1.preguntaId > obj2.preguntaId) {
+              return 1;
+            }
+
+            if (obj1.preguntaId < obj2.preguntaId) {
+              return -1;
+            }
+
+            return 0;
+          });
+          this.loading = false;
         },
         (error: any) => {
           console.log('Error en conexión: ' + error);

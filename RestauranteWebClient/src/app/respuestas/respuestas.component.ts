@@ -7,9 +7,9 @@ import {ApiService} from '../api.service';
   styleUrls: ['./respuestas.component.css']
 })
 export class RespuestasComponent implements OnInit, OnDestroy {
-  private respuestas;
+  respuestas;
   private respuestasSub;
-  private loading = true;
+  loading = true;
 
   constructor(private ApiSvc: ApiService) { }
 
