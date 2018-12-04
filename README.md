@@ -27,18 +27,6 @@ Para completar este proyecto, deberá diseñar un diseño de cuestionario e impl
 ![Heroku](https://res.cloudinary.com/hy4kyit2a/image/upload/heroku-products.png)
 
 ## Resultados
-#### Vista principal
-
-![Vista Principal](https://image.ibb.co/khSDDV/bienvenido.jpg)
-
-#### Menu Principal
-
-![Menu](https://image.ibb.co/gZKofA/menu.jpg)
-
-#### Funcionalidad Extra
-
-![Funcionalidad Extra](https://image.ibb.co/cyLWiV/funcionalidadextra1.jpg)
-![Funcionalidad Extra](https://image.ibb.co/cgSYxq/funcionalidadextra.jpg)
 
 #### Cuestionario de la Aplicación
  
